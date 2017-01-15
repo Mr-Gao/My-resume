@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖放操作</title>
+    <meta name="author" content="汪磊">
+    <link rel="stylesheet" href="../../lib/bootstrap.css">
+    <style>
+        #target {
+            padding: 20px;
+            height: 300px;
+            border: 5px dashed #c0c0c0;
+            color: #e0e0e0;
+            font-size: 40px;
+            line-height: 260px;
+            text-align: center;
+            -webkit-user-select: none;
+            cursor: pointer;
+        }
+
+        #target.actived {
+            border-color: #888;
+            color: #eaeaea;
+            box-shadow: 0 0 80px #e0e0e0 inset;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>拖点东西到下面框框里</h1></div>
+    <div class="jumbotron">
+        <p>你好啊，你今年几岁啊，哈哈，我的今天在哪里</p>
+        <img src="images/toy.png" alt="">
+    </div>
+    <div id="target">
+        Drag something into here
+        <ul id="result" class="list-group"></ul>
+    </div>
+    <br>
+
+</div>
+</body>
+<script>
+    (function () {
+        var tar = document.querySelector('#target');
+        var list = document.querySelector('#result');
+
+        tar.addEventListener('dragenter', function () {
+            tar.classList.add('actived');
+        });
+        tar.addEventListener('dragleave', function () {
+            tar.classList.remove('actived');
+        });
+
+        tar.addEventListener('dragover', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        tar.addEventListener('drop', function (e) {
+            tar.classList.remove('actived');
+            if (e.dataTransfer.files.length) {
+                var inputFiles = e.dataTransfer.files;
+                for (var i = 0; i < inputFiles.length; i++) {
+                    var li = document.createElement('li');
+                    li.innerHTML = '<h4>文件名' + inputFiles[i].name + '</h4><p>文件最后修改日期：' + inputFiles[i].lastModifiedDate.toLocaleDateString() + inputFiles[i].lastModifiedDate.toLocaleTimeString() + '</p>' + '<p>文件大小：' + (inputFiles[i].size / 1024).toFixed(2) + 'kb</p>';
+                    list.appendChild(li);
+                }
+            } else {
+                var data = e.dataTransfer.getData('text/plain');
+                if (data) {
+                    tar.innerHTML = data;
+                } else {
+                    var img = document.createElement("img");
+                    img.src = data;
+                    tar.appendChild(img);
+                }
+            }
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    })();
+</script>
+</html>

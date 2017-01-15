@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜谱查询</title>
+    <style>
+        .box {
+            width: 500px;
+            /*border: solid 1px red;*/
+            margin: 100px auto;
+        }
+
+        #searchTxt,
+        #p{
+            margin-left: 130px;
+        }
+
+        .menu {
+            width: 500px;
+            /*background-color: rgba(118, 118, 118, 0.2);*/
+            margin-top: 20px;
+        }
+    </style>
+    <!--http://apis.juhe.cn/cook/query?key=473da93790fed8084a1327057999ef66&rn=3&pn=0&dtype=jsonp&callback=handle&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF-->
+    <script src="../../lib/jquery.js"></script>
+
+
+    <script>
+
+        $(function () {
+
+//            jQuery跨域jsonp
+            $('#search').on('click',function(){
+                var txt = $('#searchTxt').val();
+                var menu = $('.menu');
+                $.ajax({
+                    type: 'get',
+                    url: 'http://apis.juhe.cn/cook/query?key=473da93790fed8084a1327057999ef66&rn=3&pn=0&dtype=jsonp&callback=handle&menu=' + txt,
+                    dataType: 'jsonp',
+                    success: function (data) {
+                        menu.text("");
+                        if (data.resultcode != 200) {
+                            menu.text('对不起，没查到！');
+                            return;
+                        }
+
+                        var datas = data.result.data;
+                        for (var i = 0; i < datas.length; i++) {
+                            var all = $('<div class="all"></div>');
+                            menu.append(all);
+
+                            var h2 = $('<h2>' + datas[i].title + '</h2>');
+                            all.append(h2);
+
+                            var p = $('<p>' + datas[i].imtro + '</p>');
+                            all.append(p);
+
+                            var albums = datas[i].albums;
+                            for (var j = 0; j < albums.length; j++) {
+                                var img = $('<img src="' + albums[j] + '">');
+                                all.append(img);
+                            }
+
+                            var zl = $('<p>' + datas[i].ingredients + '</p>');
+                            all.append(zl);
+
+                            var fl = $('<p>' + datas[i].burden + '</p>');
+                            all.append(fl);
+
+                            var steps = datas[i].steps;
+                            for (var k = 0; k < steps.length; k++) {
+                                var img2 = $('<img src="' + steps[k].img + '">');
+                                all.append(img2);
+                                var step = $('<p>' + steps[k].step + '</p>');
+                                all.append(step);
+                            }
+                            menu.append('<br>');
+                            menu.append('<hr>');
+                        }
+                    },
+                    error: function () {
+                        menu.text('查询错误');
+                    }
+                });
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<div class="box">
+    <p id="p">请输入查询菜品的名称（跨域请求聚合服务器）</p>
+    <input type="text" id="searchTxt">
+    <input type="button" id="search" value="搜索">
+    <div class="menu"></div>
+</div>
+</body>
+</html>

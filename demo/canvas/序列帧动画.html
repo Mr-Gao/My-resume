@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象序列帧动画</title>
+    <script src="js/Sprite.js"></script>
+</head>
+<body>
+<p>试着按下方向键</p>
+<canvas></canvas>
+<script>
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+    canvas.width = 600;
+    canvas.height = 600;
+    var s = new Sprite({
+        x: 200,
+        y: 200,
+        imgW: 80,
+        imgH: 130,
+        imgSrc: 'images/NPCrabbitbaby.png'
+    });
+    s.render(ctx);
+    window.addEventListener('keydown',function(e){
+        s.changeDir(e.keyCode);
+    });
+</script>
+</body>
+</html>

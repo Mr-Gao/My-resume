@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .title {
+            height: 50px;
+            background-color: #4e8fff;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+
+        .win {
+            width: 500px;
+            height: 300px;
+            border: solid 1px #ccc;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            display: none;
+        }
+
+        .win-title {
+            height: 30px;
+            background-color: #4e8fff;
+            color: #fff;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        #a2 {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="title"><a href="javascript:;" id="a1">登陆</a></div>
+<div class="box">
+    <div class="win" id="win">
+        <div class="win-title">登陆窗口 <a href="javascript:;" id="a2">关闭</a></div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+    $("a1").onclick = function () {
+        $("win").style.display = "block";
+    }
+    $("a2").onclick = function () {
+        $("win").style.display = "none";
+    }
+    $("win").children[0].onmousedown = function (event) {
+        var event = event || window.event;
+        var x = 0, y = 0;
+
+        x = event.clientX - $("win").offsetLeft;
+        y = event.clientY - $("win").offsetTop;
+
+        document.onmousemove = function (event) {
+            $("win").style.left = event.clientX - x + "px";
+            $("win").style.top = event.clientY - y + "px";
+            window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+        }
+
+        document.onmouseup = function () {
+            document.onmousemove = null;
+        }
+
+    }
+
+
+</script>

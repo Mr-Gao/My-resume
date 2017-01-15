@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        ul {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        li {
+            border: solid 1px black;
+            width: 400px;
+            margin-top: 10px;
+        }
+
+        input {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<input type="file" value="" id="input_file" multiple>
+<ul id="list"></ul>
+</body>
+<script>
+    (function () {
+        var inputFile = document.querySelector('#input_file');
+        var list = document.querySelector('#list');
+        inputFile.addEventListener('change', function () {
+            var inputFiles = this.files;
+            for (var i = 0; i < inputFiles.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = '<h4>文件名' + inputFiles[i].name + '</h4><p>文件最后修改日期：' + inputFiles[i].lastModifiedDate.toLocaleDateString() + inputFiles[i].lastModifiedDate.toLocaleTimeString() + '</p>' + '<p>文件大小：' + (inputFiles[i].size / 1024).toFixed(2) + 'kb</p>';
+                list.appendChild(li);
+            }
+        });
+    })();
+</script>
+</html>

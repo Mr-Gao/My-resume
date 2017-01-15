@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul,li {
+            list-style: none;
+        }
+        span {
+            display: block;
+            width: 500px;
+            height: 0px;
+            background-color: pink;
+            transition: height 0.3s ease;
+        }
+        li {
+            width: 500px;
+            border: solid 1px #ccc;
+            background-color: #369;
+        }
+        ul {
+            width: 500px;
+            margin: 100px auto;
+        }
+        h3 {
+            color: white;
+            line-height: 30px;
+            margin-left: 20px;
+        }
+        li:hover {
+            background-color: #223999;
+        }
+        li:hover span {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <h3>标题</h3>
+        <span></span>
+    </li>
+    <li>
+        <h3>标题</h3>
+        <span></span>
+    </li>
+    <li>
+        <h3>标题</h3>
+        <span></span>
+    </li>
+    <li>
+        <h3>标题</h3>
+        <span></span>
+    </li>
+    <li>
+        <h3>标题</h3>
+        <span></span>
+    </li>
+</ul>
+</body>
+</html>

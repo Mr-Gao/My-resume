@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box {
+            width: 350px;
+            height: 350px;
+            margin: 100px 0 0 400px;
+            border:solid 1px #ccc;
+            position: relative;
+        }
+        .big {
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top: -1px;
+            left: 350px;
+            overflow: hidden;
+            display: none;
+            border:solid 1px #ccc;
+        }
+        span {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(225, 217, 10, 0.5);
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .big img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="small" id="small">
+        <img src="images/mouse1.jpg" alt="">
+        <span></span>
+    </div>
+    <div class="big" id="big"><img src="images/mouse.jpg" alt=""></div>
+</div>
+
+<script>
+    var small = document.getElementById("small");
+    var box = document.getElementById("box");
+    var big = document.getElementById("big");
+    var image = big.children[0];
+    var span = small.children[1];
+    var left = 0;
+    var right = 0;
+    small.onmouseover = function(){
+        span.style.display = "block";
+        big.style.display = "block";
+
+    }
+    small.onmouseout = function(){
+        span.style.display = "none";
+        big.style.display = "none";
+    }
+
+    small.onmousemove = function(event){
+        var event = event || window.event;
+        left = event.clientX - box.offsetLeft - span.offsetWidth/2;
+        right = event.clientY - box.offsetTop - span.offsetHeight/2;
+        if(left<0){
+            left = 0;
+        }else if(left > 270){
+            left = 270;
+        }
+        if(right<0){
+            right = 0;
+        }else if(right>270){
+            right = 270;
+        }
+        span.style.left = left + "px";
+        span.style.top = right + "px";
+
+        image.style.left = -left * 450/350 + "px";
+        image.style.top = -right * 450/350 + "px";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+}
+img {
+    vertical-align: top;
+}
+
+.w-slider {
+    width: 310px;
+    height: 265px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 310px;
+    height: 220px;
+}
+
+.slider-main {
+    width: 620px;
+    height: 220px;
+}
+
+.slider-main-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider-ctrl {
+    text-align: center;
+    padding-top: 5px;
+}
+.slider-ctrl-con {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    background: url("../images/wicon.png") no-repeat -24px -782px;
+    margin: 0 5px;
+    cursor: pointer;
+    text-indent: -100px;
+    overflow: hidden;
+}
+.current {
+    background-position: -24px -762px;
+}
+.slider-ctrl-prev,
+.slider-ctrl-next {
+    width: 30px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.slider-ctrl-prev {
+    background: url("../images/icon.png") no-repeat 6px top;
+    left:0;
+}
+.slider-ctrl-next {
+    background: url("../images/icon.png") no-repeat -6px -45px;
+    right: 0;
+}

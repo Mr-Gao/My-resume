@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        div{
+            width: 1150px;
+            height: 400px;
+            margin:50px auto;
+            overflow: hidden;
+        }
+        div li {
+            width: 230px;
+            height: 400px;
+            float: left;
+        }
+        div ul {
+            width: 1300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" id="box">
+        <ul>
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    
+
+
+    <script>
+        var box = document.getElementById("box");
+        var lis = document.getElementsByTagName("li");
+        var timer = null;
+
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmouseover = function(){
+                for(var i=0;i<lis.length;i++){
+                    animate(lis[i],{width:100});
+                }
+                animate(this,{width:750});
+            }
+            lis[i].onmouseout = function(){
+                for(var i=0;i<lis.length;i++){
+                    animate(lis[i],{width:230});
+                }
+            }
+        }
+
+
+        // 获得当前元素的属性
+        function getStyle(obj,attr){
+            if(obj.currentStyle){  // IE浏览器
+                return obj.currentStyle[attr];
+            }else{   //w3c标准
+                return window.getComputedStyle(obj,null)[attr];
+            }
+        }
+
+        // 运动框架
+        function animate(obj,json,fn){
+            // 停止定时器
+            clearInterval(obj.timer);
+            // 开启定时器
+            obj.timer = setInterval(function(){
+                // 设置停止定时器的变量
+                var flag = true;
+                // 遍历json
+                for(var k in json){  // k是属性   json[k]是值
+                    // 得到当前的属性的值
+                    var current = parseInt(getStyle(obj,k));
+                    // 计算步长  目标位置 - 当前位置 / 10
+                    var step = (json[k] - current) / 10;
+                    // 判断步长 如果步长大于0 向上取整 小于0 向下取整
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    // 开始运动
+                    obj.style[k] = current + step + "px";
+                    // 如果有一个属性的当前位置不等于目标位置  让flag判断变量等于false
+                    if(current != json[k]){
+                        flag = false;
+                    }
+                }
+                // 如果判断定时器停止的变量等于true 就停止定时器
+                if(flag){
+                    // 清除定时器
+                    clearInterval(obj.timer);
+                    // 如果有fn回调函数
+                    if(fn){
+                        // 执行回调函数
+                        fn();
+                    }
+                }
+            },10);
+        }
+    </script>
+</body>
+</html>

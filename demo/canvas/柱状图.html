@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>柱状图</title>
+    <script src="js/konva.js"></script>
+    <script src="js/histogram.js"></script>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<p>填充数据，自动生成canvas图型</p>
+<div id="container"></div>
+<script>
+    //柱状图的数据
+    var data = [
+        {name: '前端', value: '.8', color: 'green'},
+        {name: 'PHP', value: '.3', color: 'blue'},
+        {name: 'Java', value: '.7', color: 'red'},
+        {name: 'UI', value: '.9', color: 'orange'},
+        {name: 'IOS', value: '.4', color: 'purple'},
+        {name: 'Android', value: '.9', color: 'pink'}
+    ];
+
+    // 创建一个舞台
+    var stage = new Konva.Stage({
+        container: 'container',
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+    var layer = new Konva.Layer();
+    stage.add(layer);
+
+    // 总宽度
+    var width = 3 / 4 * stage.width();
+    // 总高度
+    var height = 1 / 2 * stage.height();
+    // 初始点x坐标
+    var x0 = 1 / 8 * stage.width();
+    // 初始点y坐标
+    var y0 = 3 / 4 * stage.height();
+
+    var h = new Histogram({
+        x: x0,
+        y: y0,
+        w: width,
+        h: height,
+        data: data
+    });
+    h.addGroupOrLayer(layer);
+    stage.draw();
+    h.histogramAnimate(layer);
+
+</script>
+</body>
+</html>

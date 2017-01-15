@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            list-style:none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .nav {
+            width: 800px;
+            height: 42px;
+            background-color: #fff;
+            margin: 100px auto;
+            border-radius: 5px;
+            position: relative;
+            background: url("images/rss.png") no-repeat right center;
+            border:solid 1px #ccc;
+        }
+        li {
+            float: left;
+            width: 83px;
+            height: 42px;
+            line-height:42px;
+            text-align:center;
+            cursor: pointer;
+        }
+        span {
+            width: 83px;
+            height: 42px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url("images/cloud.gif") no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div class="nav" id="nav">
+    <span id="span"></span>
+    <ul id="ul">
+        <li>首页</li>
+        <li>公司路线</li>
+        <li>活动策划</li>
+        <li>企业文化</li>
+        <li>练习我们</li>
+        <li>招聘信息</li>
+        <li>公司简介</li>
+        <li>关于我们</li>
+    </ul>
+</div>
+
+
+</body>
+</html>
+
+
+
+<script>
+    var nav = document.getElementById("nav");
+    var ul = document.getElementById("ul");
+    var lis = ul.children;
+    var leader = 0,num = 0,target = 0;
+    var se = null;
+    for(var i=0;i<lis.length;i++){
+        lis[i].onmouseover = function(){
+            clearInterval(se);
+            target = this.offsetLeft;
+        }
+        lis[i].onmouseout = function (){
+            target = num;
+        }
+        lis[i].onclick = function(){
+            num = this.offsetLeft;
+        }
+        se = setInterval(function(){
+            leader = leader + (target - leader)/30;
+            nav.children[0].style.left = leader+"px";
+        },30);
+    }
+</script>

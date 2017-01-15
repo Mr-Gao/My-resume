@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>饼状图</title>
+    <script src="js/konva.js"></script>
+    <script src="js/PieChart.js"></script>
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<p>填充数据，自动生成canvas图型</p>
+<div id="container"></div>
+<script>
+    var data = [
+        {name: "前端", value: .25, color: '#e0e'},
+        {name: "php", value: .1, color: 'orange'},
+        {name: "UI", value: .3, color: 'blue'},
+        {name: "C++", value: .05, color: 'green'},
+        {name: "游戏", value: .05, color: 'purple'},
+        {name: "安卓", value: .15, color: 'yellowgreen'},
+        {name: "Java", value: .1, color: 'red'}
+    ];
+
+    var stage = new Konva.Stage({
+        container: 'container',
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+    var layer = new Konva.Layer();
+    stage.add(layer);
+    var cenX = stage.width() / 2,
+            cenY = stage.height() / 2;
+
+    var pc = new PieChart({
+        x: cenX,
+        y: cenY,
+        radius: 300,
+        data: data
+    });
+    pc.addGroupOrLayer(layer);
+    stage.draw();
+
+    pc.animateStart();
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构建立方体</title>
+    <style>
+        body {
+            transform-style: preserve-3d;
+        }
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        ul {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            transition: all 8s;
+            /*如果构建长方体可以缩放正立方体 scaleX(1.5)*/
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+        ul li {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(105, 255, 91, 0.7);
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            border: 1px solid #ccc;
+            top: 0;
+            left: 0;
+        }
+        ul li:nth-child(1) {
+            transform: translateZ(100px);
+        }
+        ul li:nth-child(2) {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgba(83, 149, 255, 0.7);
+        }
+        ul li:nth-child(3) {
+            transform: rotateX(-180deg) translateZ(100px);
+            background-color: rgba(158, 145, 255, 0.7);
+        }
+        ul li:nth-child(4) {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(255, 126, 236, 0.7);
+        }
+        ul li:nth-child(5) {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: rgba(255, 72, 116, 0.7);
+        }
+        ul li:nth-child(6) {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(255, 80, 38, 0.7);
+        }
+
+        ul:hover {
+            transform: rotateX(380deg) rotateY(380deg);
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>第1个盒子</li>
+    <li>第2个盒子</li>
+    <li>第3个盒子</li>
+    <li>第4个盒子</li>
+    <li>第5个盒子</li>
+    <li>第6个盒子</li>
+</ul>
+</body>
+</html>

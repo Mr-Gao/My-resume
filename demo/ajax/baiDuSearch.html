@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度智能提示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        input {
+            vertical-align: middle;
+            outline: none
+        }
+
+        .box {
+            width: 300px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .info {
+            width: 284px;
+            position: absolute;
+            top: 32px;
+            left: 0;
+            border: solid 1px #ccc;
+            border-top: none;
+            display: none;
+        }
+
+        #search_txt {
+            width: 200px;
+            height: 30px;
+            float: left;
+            font: 14px/30px "微软雅黑";
+            border: solid 1px #ccc;
+            padding-left: 4px;
+
+        }
+
+        #search {
+            width: 80px;
+            height: 32px;
+            float: left;
+            background-color: #2c8ccc;
+            border: #2c8ccc solid 1px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .info ul li {
+            padding: 5px 0 5px 4px;
+            font-family: "微软雅黑";
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #e4e4e4;
+        }
+    </style>
+    <script src="../../lib/jquery.js"></script>
+    <script>
+        function queryUrl(txt) {
+            $.ajax({
+                type: 'get',
+                dataType: 'jsonp',
+                jsonp: 'cb',
+                async: 'true',
+                data: {wd:txt},
+                url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+                success: function (data) {
+                    if($('#search_txt').val()){
+                        var info = $('.info');
+                        info.html('').css('display','block');
+                        var ul = $('<ul></ul>');
+                        for (var i = 0; i < data.s.length; i++) {
+                            var li = $('<li></li>');
+                            li.text(data.s[i]);
+                            ul.append(li);
+                            li.on('mouseenter',function(){
+                                $(this).toggleClass('active');
+                            }).on('mouseleave',function(){
+                                $(this).toggleClass('active');
+                            })
+                        }
+                        info.append(ul);
+                    }
+                },
+                error: function () {
+                    console.log('error');
+                }
+            });
+        }
+
+        $(function () {
+            $('#search_txt').on('keyup', function () {
+                var txt = $('#search_txt').val();
+                queryUrl(txt);
+                if(txt == ''){
+                    $('.info').html('').css('display','none');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<p>跨域请求百度服务器</p>
+<div class="box">
+    <input type="text" id="search_txt">
+    <button id="search">百度一下</button>
+    <div class="info">
+    </div>
+</div>
+
+</body>
+</html>

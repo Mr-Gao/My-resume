@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .box {
+            width: 400px;
+            height: 10px;
+            background-color: #a4a4a4;
+            margin: 200px 0 0 100px;
+            position: relative;
+        }
+        .scroll {
+            width: 0;
+            height: 10px;
+            background-color: #61cdff;
+        }
+        .bar {
+            width: 10px;
+            height: 20px;
+            background-color: #61cdff;
+            position: absolute;
+            top: -5px;
+            left: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="scroll" id="scroll">
+        <div class="bar" id="bar"></div>
+    </div>
+</div>
+<br>
+<span id="span1"></span>
+<br>
+<span id="span2"></span>
+</body>
+</html>
+
+<script>
+    var box = document.getElementById("box");
+    var scroll = box.children[0];
+    var bar = document.getElementById("bar");
+    var span1 = document.getElementById("span1");
+    var span2 = document.getElementById("span2");
+    var left = 0;
+    bar.onmousedown = function (event){
+        var event = event || window.event;
+        var that = this;
+        document.onmousemove = function(event){
+            var event = event || window.event;
+            left = event.clientX - box.offsetLeft;
+            if(left<0){left = 0;}
+            if(left>400){left = 400;}
+            that.style.left = left + "px";
+            scroll.style.width = left + "px";
+
+            span1.innerHTML = "滚动条已走"+ parseInt(((left)/ box.offsetWidth)*100) +"%";
+            span2.innerHTML = "滚动条已走"+ left +"px";
+
+            window.getSelection ? window.getSelection().removeAllRanges():document.selection.empty();
+
+        }
+        document.onmouseup = function(){
+            document.onmousemove = null;
+        }
+    }
+
+
+
+
+
+</script>

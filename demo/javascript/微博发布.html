@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			ul,li,ol{
+				list-style: none;
+			}
+       		.box {
+				width: 500px;
+				border:solid 1px #000;
+				margin: 100px auto;
+			}
+
+			.top {
+				height: 180px;
+				margin: 20px 0 0 10px;
+			}
+
+			.bottom ul{
+				width: 300px;
+				margin: 0 auto 20px;
+			}
+
+			li {
+				width: 250px;
+				margin-top: 10px;
+				border-bottom: dashed 1px #000;
+			}
+
+			a {
+				float: right;
+			}
+        	
+        </style>
+			
+
+
+      
+       
+    </head>
+
+    <body>
+
+		<div class="box">
+			<div class="top" id="top">
+				微博发布:
+				<textarea cols="45" rows="10"></textarea>
+				<button>发布</button>
+			</div>
+			<div class="bottom" id="div">
+
+			</div>
+		</div>
+
+
+
+		<script>
+
+			var btn = document.getElementsByTagName("button")[0];
+			var txa = document.getElementsByTagName("textarea")[0];
+			var div = document.getElementById("div");
+			var ul = document.createElement("ul");
+			div.appendChild(ul);
+			btn.onclick = function(){
+				if(txa.value == ""){
+					alert("输入不能为空");
+				}else{
+					var li = document.createElement("li");
+					li.innerHTML = txa.value+"<a href='javascript:;'>删除</a>";
+					txa.value ="";
+					var lis = ul.children;
+					if(lis.length < 0){
+						ul.appendChild(li);
+					}else{
+						ul.insertBefore(li,lis[0]);
+					}
+
+					var aa = document.getElementsByTagName("a");
+					for(var i=0;i<aa.length;i++){
+						aa[i].onclick = function(){
+							ul.removeChild(this.parentNode);
+
+						}
+					}
+				}
+			}
+
+
+
+        </script>
+
+
+    </body>
+</html>

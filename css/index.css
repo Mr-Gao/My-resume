@@ -1,0 +1,244 @@
+/*头部开始*/
+
+.header-img > img {
+    width: 150px;
+    height: 150px;
+}
+/*头部导航栏*/
+header > nav {
+    width: 50%;
+    float: right;
+    height: 80px;
+}
+
+header > nav > ul {
+    width: 100%;
+    height: 80px;
+}
+
+header > nav > ul > li {
+    float: left;
+    width: 25%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+}
+header > nav > ul > li > a {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+header > nav > ul > li > a::before,
+header > nav > ul > li > a::after {
+    display: inline-block;
+    font-size: 16px;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+}
+header > nav > ul > li > a::before {
+    content: '[';
+}
+header > nav > ul > li > a::after {
+    content: ']';
+}
+header > nav > ul > li > a:hover::before {
+    opacity: 1;
+    transform: translateX(-10px);
+}
+header > nav > ul > li > a:hover::after {
+    opacity: 1;
+    transform: translateX(10px);
+}
+/*头部结束*/
+
+/*主体部分开始*/
+
+.step > .header-img {
+    width: 150px;
+    height: 150px;
+    margin: 100px 375px 50px;
+}
+.text > p{
+    width: 100%;
+    text-align: center;
+}
+.step1-text > p{
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 40px 0;
+    font-weight: bold;
+}
+.step2-text > p{
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0 20px 80px;
+    font-weight: bold;
+    text-align: left;
+}
+.step2-text > p > span{
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: left;
+    color: #afafaf;
+}
+.step2-text > h3{
+     height: 50px;
+     font-size: 50px;
+     line-height: 50px;
+     margin: 50px 0;
+     font-weight: bold;
+     text-align: center;
+ }
+.step2-text {
+    float: left;
+}
+.step2-img > img {
+    float: right;
+    margin: 132px 70px;
+}
+.step2-text > .text-blue {
+    color: #f36a61;
+    margin-top: 80px;
+    font-size: 60px;
+}
+
+.step3-text {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 240px;
+    color: #9DE5F3;
+    font-weight: bold;
+}
+.step4-text {
+    width: 100%;
+    height: 100%;
+    margin-top: 130px;
+}
+.step4-text > p{
+    font-size: 60px;
+    margin: 50px 40px;
+    font-weight: bold;
+}
+.step4-text > .step4-text-m {
+    font-size: 30px;
+    text-align: right;
+    color: #9DE5F3;
+}
+.step5-text {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 200px;
+    font-weight: bold;
+}
+.step5-text > p {
+    margin-top: 30px;
+}
+.step6-text > h3 {
+    font-size: 80px;
+}
+.step6-text {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin: 50px;
+}
+.step6-text > span{
+    font-size: 30px;
+    color: #ff6b57;
+    position: absolute;
+    top: 86px;
+    left: 50%;
+    margin-left: -77px;
+}
+.step6-text > span > span{
+    color: #ccc;
+}
+.step6-text > p {
+    margin-top: 30px;
+}
+.step6-text > p:nth-of-type(1) {
+     margin-top: 80px;
+}
+.step6-text > p > a {
+    color: #9DE5F3;
+}
+.step6-text > button {
+    width: 200px;
+    height: 50px;
+    background-color: #9DE5F3;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #ff6b57;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all .6s;
+}
+.step6-text > .btn-p {
+    display: none;
+}
+.step6-text > button:hover {
+    background-color: #ff6b57;
+    color: #9DE5F3;
+}
+.step7-text {
+    font-size: 40px;
+}
+.step7-text > p:last-child {
+    color: #9DE5F3;
+}
+
+.step8-text > p {
+    font-size: 30px;
+}
+.step8-text > p:nth-of-type(1) {
+    margin-top: 60px;
+}
+.step8-text > p:last-child {
+    color: #9DE5F3;
+}
+.step9-text {
+    font-size: 30px;
+}
+
+.step9-text > p:nth-of-type(3),
+.step9-text > p:nth-of-type(4) {
+    font-size: 35px;
+    color: #ff6b57;
+}
+.step {
+    width: 900px;
+    height: 600px;
+    background-color: #2C323A;
+    box-shadow: 5px 5px 10px #1d2227;
+    /*cursor: pointer;*/
+}
+
+#overview {
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    box-shadow: none;
+}
+
+footer > div {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgba(21, 28, 35, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.no-support-message { display:none; }
+.impress-not-supported .no-support-message { display:block; }
+
+/*主体部分结束*/

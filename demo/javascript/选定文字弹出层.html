@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .demo {
+            width: 300px;
+            background: rgba(78, 143, 255, .9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            color: #ff8477;
+            font : 700 30px "微软雅黑";
+        }
+        .test,.anther {
+            width: 300px;
+            margin: 50px 0 50px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo" id="demo"></div>
+    <div class="test" id="test">消息称，截至7月底，湖南各项整改任务有力有序推进，取得了阶段性成效。其中包括，加强传媒系统腐败问题线索排查、分析，加大腐败案件查处力度。省纪委先后查处湖南日报社领导班子系列腐败案件，包括原党组成员、社务委员薛伯清案，原党组书记、社长覃晓光案，原党组副书记、总经理皮林案，原党组成员、社务委员刘树林案，同时查处了该社6名处级干部的违纪问题；对湖南广播电视台党委委员、副台长罗毅立案调查。</div>
+    <div class="anther">消息称，截至7月底，湖南各项整改任务有力有序推进，取得了阶段性成效。其中包括，加强传媒系统腐败问题线索排查、分析，加大腐败案件查处力度。省纪委先后查处湖南日报社领导班子系列腐败案件，包括原党组成员、社务委员薛伯清案，原党组书记、社长覃晓光案，原党组副书记、总经理皮林案，原党组成员、社务委员刘树林案，同时查处了该社6名处级干部的违纪问题；对湖南广播电视台党委委员、副台长罗毅立案调查。</div>
+</body>
+</html>
+
+<script>
+    function $(id){return document.getElementById(id);}
+
+    function show(id){
+        $(id).style.display = "block";
+    }
+
+    $("test").onmouseup = function (event){
+        var event = event || window.event;
+        var txt = "";
+        if(window.getSelection){
+            txt = window.getSelection().toString();
+        }else {
+            txt = document.selection.createRange().text;
+        }
+        if(txt){
+            setTimeout(function(){
+                show("demo");
+                $("demo").style.left = event.clientX + "px";
+                $("demo").style.top = event.clientY + "px";
+                $("demo").innerHTML = txt;
+            },200)
+        }
+//        if(event && event.stopPropagation){
+//            event.stopPropagation();
+//        }else{
+//            event.cancelBubble = true;
+//        }
+    }
+
+    document.onclick = function (event){
+        var event = event || window.event;
+        var targetId = event.target ? event.target.id : event.srcElement.id;
+        if(targetId != "demo"){
+            $("demo").style.display = "none";
+        }
+    }
+</script>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul,li{list-style:none;}
+        a{text-decoration: none;color: #ccc;}
+        body {
+            background-color: #ccc;
+            font: 15px "微软雅黑";
+        }
+        nav {
+            width: 80%;
+            height: 50px;
+            margin: 100px auto;
+            background-image: linear-gradient(180deg,#292929, #252525);
+            min-width: 500px;
+        }
+        nav>ul{
+            display: flex;
+        }
+        .nav-items {
+            flex: 1;
+            position: relative;
+        }
+        .nav-items a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+        }
+        .son-ul {
+            width: 100%;
+            height: 0;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            transform-style: preserve-3d;
+            perspective: 500px;
+        }
+        .son-ul li {
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            transition: all 0.5s;
+            opacity: 0;
+            background-image: linear-gradient(180deg,#292929, #252525);
+            transform: rotateY(90deg);
+            cursor: pointer;
+        }
+        
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+//            $('.nav-items').append('<ul class="son-ul"></ul>');
+//            $('.son-ul').append('<li></li><li></li><li></li><li></li><li></li>');
+//            $('.son-ul').children('li').text('子元素内容');
+            $('.nav-items').on('mouseenter mouseleave',function(e){
+                if(e.type == 'mouseleave'){
+                    $(this).children('.son-ul').children('li').each(function(index,ele){
+                        $(ele).css({'transition-delay': 0.4 - index * 0.1 +'s'});
+                    }).css({'transform':'rotateY(90deg)',opacity:0});
+                }else{
+                    $(this).children('.son-ul').children('li').each(function(index,ele){
+                        $(ele).css({'transition-delay': index * 0.1 +'s'});
+                    }).css({'transform':'rotateY(0deg)',opacity:1});
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="nav-items">
+            <a href="javascript:;">导航栏</a>
+            <ul class="son-ul">
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+            </ul>
+        </li>
+        <li class="nav-items">
+            <a href="javascript:;">导航栏</a>
+            <ul class="son-ul">
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+            </ul>
+        </li>
+        <li class="nav-items">
+            <a href="javascript:;">导航栏</a>
+            <ul class="son-ul">
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+            </ul>
+        </li>
+        <li class="nav-items">
+            <a href="javascript:;">导航栏</a>
+            <ul class="son-ul">
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+            </ul>
+        </li>
+        <li class="nav-items">
+            <a href="javascript:;">导航栏</a>
+            <ul class="son-ul">
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+                <li>子元素</li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

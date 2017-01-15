@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../lib/jquery.js"></script>
+    <style>
+        *{margin: 0;  padding:0;}
+        ul,li {
+            list-style: none;
+        }
+        body,ul,li {
+            margin:0;
+            padding:0;
+        }
+        .nav li {
+            width: 80px;
+            height: 30px;
+            float: left;
+            border-right: 1px dashed #ccc;
+            font-size: 15px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav ins {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: -1;
+        }
+
+        .nav ul {
+            margin: 100px auto;
+            width: 647px;
+            height: 30px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .content {
+            width: 550px;
+            margin: -20px auto 0;
+            -webkit-column-count: 2;
+            -webkit-column-gap: 60px;
+            -webkit-column-rule: 2px dashed #ccc;
+        }
+        h3,p {
+            margin: 10px 0;
+            font-family: 微软雅黑;
+        }
+
+
+    </style>
+
+    <script>
+        $(function(){
+            $(".nav li:last").css("border",0);
+            $(".nav li").append("<ins></ins>");
+            var arr = ['red','blue','pink','green','black','yellow','yellowgreen','orange'];
+            $('.nav ins').each(function(i){
+                $(this).css('background-color',arr[i]);
+            });
+            $('.nav li').on('mouseenter',function(){
+                $(this).children('ins').stop().animate({top: 0},200);
+                $('audio').get($(this).index()).load();
+                $('audio').get($(this).index()).play();
+            }).on('mouseleave',function(){
+                $(this).children('ins').stop().animate({top: 30},200);
+            });
+            $(window).on('keydown',function(event){
+                var num = 0;
+                if (event.keyCode >= 97 && event.keyCode <= 104) {
+                    num = event.keyCode - 97;
+                    $('.nav li ins').eq(num).trigger('mouseenter');
+                    setTimeout(function(){
+                        $('.nav ins').eq(num).trigger('mouseleave');
+                    },300);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h3>欢乐颂</h3>
+        <p>3345 5432 1123 322- </p>
+        <p>3345 5432 1123 211-</p>
+        <p>2231 2 34 31 2 34 32 12(5)3</p>
+        <p>3345 54 34 2 1123 211-</p>
+
+
+        <h3>小星星</h3>
+        <p>1 1 5 5 6 6 5－ 4 4 3 3 2 2 1－</p>
+        <p>5 5 4 4 3 3 2－ 5 5 4 4 3 3 2－</p>
+        <p>1 1 5 5 6 6 5－ 4 4 3 3 2 2 1－</p>
+
+
+        <h3>生日快乐</h3>
+        <p>55 65 87- 55 65 21-</p>
+        <p>55 53 176- 44 31 21-</p>
+
+        <h3>我是一个粉刷匠</h3>
+        <p>5353531 24325 5353531 24321</p>
+        <p>2244315 24325 5353531 24321</p>
+    </div>
+    <audio src="music/1.ogg"></audio>
+    <audio src="music/2.ogg"></audio>
+    <audio src="music/3.ogg"></audio>
+    <audio src="music/4.ogg"></audio>
+    <audio src="music/5.ogg"></audio>
+    <audio src="music/6.ogg"></audio>
+    <audio src="music/7.ogg"></audio>
+    <audio src="music/8.ogg"></audio>
+</body>
+</html>

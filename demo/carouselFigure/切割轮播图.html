@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0;}
+        ul,li{list-style:none;}
+        ul {
+            width: 560px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: purple;
+            position: relative;
+        }
+        ul li {
+            width: 112px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: pink;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        ul li div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        ul li div:nth-child(1) {
+            background: url("images/1.png") no-repeat;
+            transform: rotateX(0deg) translateZ(150px);
+        }
+        ul li div:nth-child(2) {
+             background: url("images/2.png") no-repeat;
+             transform: rotateX(-90deg) translateZ(150px);
+        }
+        ul li div:nth-child(3) {
+            background: url("images/3.png") no-repeat;
+            transform: rotateX(-180deg) translateZ(150px);
+        }
+        ul li div:nth-child(4) {
+            background: url("images/4.png") no-repeat;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .next,
+        .prev {
+            width: 40px;
+            height: 70px;
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            top: 135px;
+            left: 0;
+            color: #ccc;
+            line-height: 70px;
+            text-align: center;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .next {
+            left: 519px;
+        }
+        .move {
+            background-color: rgba(0,0,0,0.7);
+        }
+    </style>
+    <script src="../../lib/jquery.js"></script>
+    <script>
+        $(function(){
+            var width = $('li').width();
+            $('li').each(function(index){
+                $(this).css({'left': index * width ,'transition-delay': index * 0.1 + 's'});
+                $(this).children('div').css('background-position', -index * width + 'px 0');
+            });
+            var num = 0;
+            $('.next').on('click mouseenter mouseleave',function(e){
+                if(e.type == 'click'){
+                    num++;
+                    $('li').css('transform','rotateX('+ num * 90 +'deg)');
+                }else{
+                    $(this).toggleClass('move');
+                }
+            });
+            $('.prev').on('click mouseenter mouseleave',function(e){
+                if(e.type == 'click'){
+                    num--;
+                    $('li').css('transform','rotateX('+ num * 90 +'deg)');
+                }else{
+                    $(this).toggleClass('move');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <span class="prev"><</span>
+        <span class="next">></span>
+    </ul>
+
+</nav>
+</body>
+</html>

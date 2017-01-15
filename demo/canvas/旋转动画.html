@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>itcast案例</title>
+    <script src="js/konva.js"></script>
+    <script src="js/CircleText.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+</div>
+
+<script>
+    var stage = new Konva.Stage({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        container: 'container'
+    });
+
+    var animateLayer = new Konva.Layer();
+    var bgLayer = new Konva.Layer();
+
+    stage.add(bgLayer);
+
+    stage.add(animateLayer);
+
+    var cenX = stage.width() / 2;
+    var cenY = stage.height() / 2;
+
+    var innerCircle = new Konva.Circle({
+        x: cenX,
+        y: cenY,
+        radius: 125,
+        stroke: '#ccc',
+        opacity: .5,
+        dash: [10, 4]
+    });
+    bgLayer.add(innerCircle);
+
+    var outCircle = new Konva.Circle({
+        x: cenX,
+        y: cenY,
+        radius: 220,
+        stroke: '#ccc',
+        opacity: .5,
+        dash: [10, 4]
+    });
+    bgLayer.add(outCircle);
+
+    //    中心圆
+    var cenCircle = new CircleText({
+        x: cenX,
+        y: cenY,
+        innerRadius: 75,
+        outRadius: 90,
+        circleColor: 'blue',
+        ringColor: '#ccc',
+        textValue: 'web前端'
+    });
+    cenCircle.addToGroupOrLayer(bgLayer);
+
+    //    l2圆
+    //    创建一个l2的组
+    var l2Group = new Konva.Group({
+        x: cenX,
+        y: cenY
+    });
+    animateLayer.add(l2Group);
+
+    var l2_Circle_html5 = new CircleText({
+        x: 125 * Math.cos(-60 * Math.PI / 180),
+        y: 125 * Math.sin(-60 * Math.PI / 180),
+        innerRadius: 30,
+        outRadius: 35,
+        circleColor: 'orange',
+        ringColor: '#ccc',
+        textValue: 'HTML5'
+    });
+    l2_Circle_html5.addToGroupOrLayer(l2Group);
+
+    var l2_Circle_css3 = new CircleText({
+        x: 125 * Math.cos(120 * Math.PI / 180),
+        y: 125 * Math.sin(120 * Math.PI / 180),
+        innerRadius: 30,
+        outRadius: 35,
+        circleColor: 'pink',
+        ringColor: '#ccc',
+        textValue: 'CSS3'
+    });
+    l2_Circle_css3.addToGroupOrLayer(l2Group);
+
+    stage.draw();
+
+    //    l3圆
+    //    创建一个l3组
+    var l3Group = new Konva.Group({
+        x: cenX,
+        y: cenY
+    });
+    animateLayer.add(l3Group);
+
+    var l3_Circle_js = new CircleText({
+        x: 220 * Math.cos(-50 * Math.PI / 180),
+        y: 220 * Math.sin(-50 * Math.PI / 180),
+        innerRadius: 40,
+        outRadius: 50,
+        circleColor: 'yellowgreen',
+        ringColor: '#ccc',
+        textValue: 'javascript'
+    });
+    l3_Circle_js.addToGroupOrLayer(l3Group);
+
+    var l3_Circle_AJAX = new CircleText({
+        x: 220 * Math.cos(120 * Math.PI / 180),
+        y: 220 * Math.sin(120 * Math.PI / 180),
+        innerRadius: 40,
+        outRadius: 50,
+        circleColor: '#f40',
+        ringColor: '#ccc',
+        textValue: 'AJAX'
+    });
+    l3_Circle_AJAX.addToGroupOrLayer(l3Group);
+
+
+    var l2rotateAngleIndex = 60;
+    var l3rotateAngleIndex = 30;
+    var animate = new Konva.Animation(function (frame) {
+        var l2RotateAngle = l2rotateAngleIndex * frame.timeDiff / 1000;
+        var l3RotateAngle = l3rotateAngleIndex * frame.timeDiff / 1000;
+        l2Group.rotate(l2RotateAngle);
+        l3Group.rotate(-l3RotateAngle);
+
+        l2Group.getChildren().each(function (item) {
+            item.rotate(-l2RotateAngle);
+        });
+        l3Group.getChildren().each(function(item){
+            item.rotate(l3RotateAngle);
+        })
+    }, animateLayer);
+    animate.start();
+
+    animateLayer.on('mouseover', function () {
+        l2rotateAngleIndex = 10;
+        l3rotateAngleIndex = 5;
+    });
+    animateLayer.on('mouseout', function () {
+        l2rotateAngleIndex = 60;
+        l3rotateAngleIndex = 30;
+    });
+
+</script>
+</body>
+</html>

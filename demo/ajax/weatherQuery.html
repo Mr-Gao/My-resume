@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>未来5天 天气查询</title>
+    <style>
+        .box {
+            position: relative;
+            left: 50%;
+            background: lightGreen;
+            width: 300px;
+            height: 500px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin-left: -150px;
+            padding-bottom: 20px;
+        }
+
+        .box select {
+            margin-left: 80px;
+            margin-top: 10px;
+        }
+
+        .box div {
+            width: 300px;
+            background: lightBlue;
+            border-bottom: red solid 1px;
+        }
+
+        .box div ul li {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+    </style>
+    <script src="../../lib/template.js"></script>
+    <script id="weather" type="text/html">
+        <span>当前PM2.5含量：{{pm25.pm25[0]}}</span>
+        <br><hr>
+        {{each weather as value}}
+        <span>日期：{{value.date}}</span>
+        <ul>
+            <li>白天：{{value.info.day[1]}}</li>
+            <li>最高温度：{{value.info.day[2]}}度</li>
+            <li>{{value.info.day[3]}}：{{value.info.day[4]}}</li>
+            <br>
+            <li>夜间：{{value.info.night[1]}}</li>
+            <li>最低温度：{{value.info.night[2]}}度</li>
+            <li>{{value.info.night[3]}}：{{value.info.night[4]}}</li>
+        </ul>
+        {{/each}}
+    </script>
+    <script>
+        function callback(data) {
+            var html = template('weather', data);
+            info.innerHTML = html;
+        }
+        window.onload = function () {
+            var btn = document.querySelector('#btn');
+            var city = document.querySelector('#city');
+            var info = document.querySelector('#info');
+            btn.addEventListener('click', function () {
+                info.innerHTML = '';
+                var txt = city.value;
+                var url = 'http://cdn.weather.hao.360.cn/api_weather_info.php?app=hao360&_jsonp=callback&code=' + txt;
+                var sc = document.createElement('script');
+                sc.src = url;
+                document.body.appendChild(sc);
+                document.body.removeChild(sc);
+            });
+        }
+    </script>
+</head>
+<body>
+<p>跨域请求360服务器</p>
+<div class="box">
+    <select id="city">
+        <option value="101180101">郑州</option>
+        <option value="101010100">北京</option>
+        <option value="101020100">上海</option>
+        <option value="101280101">广州</option>
+        <option value="101280601">深圳</option>
+    </select>
+    <input type="button" id="btn" value="查询">
+    <div id="info"></div>
+</div>
+</body>
+</html>

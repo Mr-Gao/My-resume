@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>konva</title>
+    <script src="js/konva.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+    </style>
+</head>
+<body>
+<div id="container"></div>
+
+<script>
+    var stage = new Konva.Stage({
+        container: 'container',
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+    var cenX = stage.width() / 2;
+    var cenY = stage.height() / 2;
+    var height =  stage.height() / 20;
+    var x = stage.width() / 8;
+    var maxWidth = stage.width() * 3 / 4;
+
+    var layer = new Konva.Layer();
+    stage.add(layer);
+
+    var innerRect = new Konva.Rect({
+        x: x,
+        y: cenY,
+        width: 100,
+        height: height,
+        fill: 'lightblue',
+        cornerRadius: height / 3
+    });
+    layer.add(innerRect);
+
+    var outRect = new Konva.Rect({
+        x: x,
+        y: cenY,
+        width: maxWidth,
+        height: height,
+        stroke: 'blue',
+        cornerRadius: height / 3
+    });
+    layer.add(outRect);
+
+
+    layer.draw();
+
+    innerRect.to({
+        width: maxWidth,
+        duration: 2
+    });
+
+
+</script>
+</body>
+</html>
