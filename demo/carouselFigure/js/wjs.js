@@ -53,14 +53,14 @@ window.onload = function (){
     }
 
     var timer = null;
-    timer = setInterval(autoPlay,1000);
+    timer = setInterval(autoPlay,2000);
 
     js_slider.onmouseover = function(){
         clearInterval(timer);
     }
     js_slider.onmouseout = function(){
         clearInterval(timer);
-        timer = setInterval(autoPlay,1000);
+        timer = setInterval(autoPlay,2000);
     }
 
     function autoPlay(){

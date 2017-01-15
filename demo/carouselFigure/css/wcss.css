@@ -57,10 +57,10 @@ img {
     cursor: pointer;
 }
 .slider-ctrl-prev {
-    background: url("../images/icon.png") no-repeat 6px top;
+    background: url("../images/wicon.png") no-repeat 6px top;
     left:0;
 }
 .slider-ctrl-next {
-    background: url("../images/icon.png") no-repeat -6px -45px;
+    background: url("../images/wicon.png") no-repeat -6px -45px;
     right: 0;
 }
