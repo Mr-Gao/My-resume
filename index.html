@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -207,7 +207,13 @@
         $(this).css('display', 'none');
         $('.btn-p').css('display', 'block');
     });
-    $('#footer-div').css('top', document.body.clientHeight - 70);
+
+    
+    function change(){
+        $('#footer-div').css('top', document.body.clientHeight - 70);
+    }
+    window.onresize = function(){change();}
+    change();
 </script>
 </body>
 </html>
