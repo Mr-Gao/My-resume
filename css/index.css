@@ -246,13 +246,54 @@ footer > #zz {
     z-index: 1111;
     background-color: #2C323A;
 }
-footer > #zz > p {
-    width: 100%;
-    margin-top: 400px;
-    font-size: 100px;
-    text-align: center;
-}
+
 .no-support-message { display:none; }
 .impress-not-supported .no-support-message { display:block; }
 
 /*主体部分结束*/
+
+.spinner {
+    margin: 400px auto;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    font-family: '微软雅黑';
+}
+
+.spinner > div {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}

@@ -194,7 +194,16 @@
 <!--主体结束-->
 <!--脚部开始-->
 <footer>
-    <div id="zz"><p>loading...</p></div>
+    <div id="zz">
+        <div class="zz-con">
+            <div class="spinner">
+                loading
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
     <div id="footer-div">请按 ← 或 → 浏览网页，也可以直接鼠标点击每个小页面来浏览</div>
 </footer>
 <!--脚部结束-->
@@ -220,11 +229,11 @@
                         }
                     }
                 }
-            }, 50)
+            }, 100);
         }
 
         imgLoad(imgs, function () {
-            $('#zz').css('display','none');
+            $('#zz').css('display','none').html('');
 
             // 绑定button点击事件
             $('#btn-call').on('click', function () {
