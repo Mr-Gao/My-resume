@@ -82,13 +82,7 @@ header > nav > ul > li > a:hover::after {
     font-weight: bold;
     text-align: left;
 }
-.step2-text > p > span{
-    height: 40px;
-    font-size: 20px;
-    line-height: 40px;
-    text-align: left;
-    color: #afafaf;
-}
+
 .step2-text > h3{
      height: 50px;
      font-size: 50px;
@@ -105,7 +99,7 @@ header > nav > ul > li > a:hover::after {
     margin: 132px 70px;
 }
 .step2-text > .text-blue {
-    color: #f36a61;
+    color: #dcdcdc;
     margin-top: 80px;
     font-size: 60px;
 }
@@ -114,7 +108,6 @@ header > nav > ul > li > a:hover::after {
     font-size: 100px;
     text-align: center;
     margin-top: 240px;
-    color: #9DE5F3;
     font-weight: bold;
 }
 .step4-text {
@@ -145,7 +138,7 @@ header > nav > ul > li > a:hover::after {
     font-size: 80px;
 }
 .step6-text {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     position: relative;
@@ -162,14 +155,14 @@ header > nav > ul > li > a:hover::after {
 .step6-text > span > span{
     color: #ccc;
 }
-.step6-text > p {
+.step6-text  p {
     margin-top: 30px;
 }
 .step6-text > p:nth-of-type(1) {
      margin-top: 80px;
 }
-.step6-text > p > a {
-    color: #9DE5F3;
+.step6-text  p > a {
+    color: #ade8f3;
 }
 .step6-text > button {
     width: 200px;
@@ -180,47 +173,29 @@ header > nav > ul > li > a:hover::after {
     font-size: 30px;
     color: #ff6b57;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 50px;
     transition: all .6s;
 }
-.step6-text > .btn-p {
+.step6-text > .btn-div {
+    margin-top: 30px;
     display: none;
+    opacity: 0;
 }
 .step6-text > button:hover {
     background-color: #ff6b57;
     color: #9DE5F3;
 }
-.step7-text {
-    font-size: 40px;
-}
-.step7-text > p:last-child {
-    color: #9DE5F3;
-}
-
-.step8-text > p {
-    font-size: 30px;
-}
-.step8-text > p:nth-of-type(1) {
-    margin-top: 60px;
-}
-.step8-text > p:last-child {
-    color: #9DE5F3;
-}
-.step9-text {
-    font-size: 30px;
-}
 
 .step9-text > p:nth-of-type(3),
 .step9-text > p:nth-of-type(4) {
     font-size: 35px;
-    color: #ff6b57;
+    color: #ffa09c;
 }
 .step {
     width: 900px;
     height: 600px;
     background-color: rgba(255, 255, 255, 0.08);
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
-    /*cursor: pointer;*/
 }
 
 #overview {

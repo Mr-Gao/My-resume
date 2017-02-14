@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .center {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 175px;
+            left: 175px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .ball {
+            width: 26px;
+            height: 26px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: -26px;
+            left: -12px;
+        }
+
+        .newball {
+            width: 26px;
+            height: 26px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: -26px;
+            left: -12px;
+        }
+
+        .line {
+            width: 2px;
+            height: 124px;
+            background: black;
+            position: absolute;
+            top: 76px;
+            left: 199px;
+            transform-origin: 50% 100%;
+        }
+
+        .box {
+            width: 400px;
+            height: 600px;
+            border: 1px solid black;
+            background: rgb(224, 224, 224);
+            overflow: hidden;
+        }
+
+        .start {
+            width: 400px;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            text-align: center;
+            line-height: 600px;
+            font-size: 40px;
+            color: rgb(214, 206, 206);
+        }
+
+        .startBtn {
+            width: 150px;
+            height: 60px;
+            border: 2px solid gray;
+            position: absolute;
+            top: 350px;
+            left: 125px;
+            background: rgba(188, 188, 188, 0.8);
+            border-radius: 20px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 25px;
+            color: rgb(88, 100, 100);
+            cursor: pointer;
+        }
+
+        .num {
+            width: 26px;
+            height: 26px;
+            background: black;
+            color: white;
+            border-radius: 50%;
+            margin-left: 187px;
+            margin-top: 5px;
+            text-align: center;
+            line-height: 26px;
+            font-size: 15px;
+        }
+
+        .over {
+            width: 400px;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            text-align: center;
+            line-height: 600px;
+            font-size: 40px;
+            color: rgb(214, 206, 206);
+            display: none;
+        }
+
+        .again {
+            width: 150px;
+            height: 60px;
+            border: 2px solid gray;
+            position: absolute;
+            top: 350px;
+            left: 125px;
+            background: rgba(188, 188, 188, 0.8);
+            border-radius: 20px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 25px;
+            color: rgb(88, 100, 100);
+            cursor: pointer;
+        }
+
+        .niu {
+            width: 400px;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            text-align: center;
+            line-height: 600px;
+            font-size: 100px;
+            color: rgb(214, 206, 206);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="box"></div>
+    <div class="start">
+        见缝插针<br>
+        <div class="startBtn">START</div>
+    </div>
+    <div class="over">
+        游戏结束
+        <div class="again">AGAIN</div>
+    </div>
+    <div class="niu">
+        真厉害
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var start = document.querySelector('.start');
+    var startBtn = document.querySelector('.startBtn');
+    var again = document.querySelector('.again');
+    startBtn.onclick = function () {
+        start.style.display = 'none';
+    }
+
+    var body_ = document.querySelector('.box');
+    var wrap = document.createElement('div');
+    wrap.className = 'wrap';
+    body_.appendChild(wrap);
+    var center = document.createElement('div');
+    center.className = 'center';
+    body_.appendChild(center);
+    var index = 1;
+    var x = 5;
+    var arr = [];
+    function made() {
+        for (var i = 0; i < x; i++) {
+            var line = document.createElement('div');
+            line.className = 'line';
+            line.setAttribute('id', 'init-line' + (i + 1) + '');
+            line.style.transform = 'rotate(' + i * (360 / x) + 'deg)';
+            arr.push(i * 360 / x);
+            console.log(arr);
+            var ball = document.createElement('div');
+            ball.className = 'ball';
+            line.appendChild(ball);
+            wrap.appendChild(line);
+        }
+    }
+    var timer = null;
+    var z = 0;
+    timer = setInterval(function () {
+        z++;
+        wrap.style.transform = 'rotate(' + z + 'deg)';
+        wrap.style.transformOrigin = '50% 50%';
+        if (z >= 360) {
+            z = 0;
+        } else {
+            z++;
+        }
+    }, 20);
+
+    body_.onclick = function () {
+        var newline = document.createElement('div');
+        newline.className = 'newline';
+        newline.style.width = '2px';
+        newline.style.height = '124px';
+        newline.style.background = 'black';
+        newline.style.position = 'absolute';
+        newline.style.left = '199px';
+        newline.style.top = '76px';
+        newline.style.transformOrigin = '50% 100%';
+        var newZ = 180 - z;
+        if (newZ <= 0) {
+            arr.push(newZ + 360)
+        } else {
+            arr.push(newZ);
+        }
+        // console.log(arr);
+        newline.style.transform = 'rotate(' + newZ + 'deg)';
+        var newball = document.createElement('div');
+        newball.className = 'newball';
+        newline.appendChild(newball);
+        wrap.appendChild(newline);
+        for (var i = 0; i < arr.length - 1; i++) {
+            if (Math.abs(arr[i] - arr[arr.length - 1]) <= 10) {
+                clearInterval(timer);
+                gameover();
+            }
+        }
+        var mm = 0;
+        var nums = document.querySelectorAll('.num');
+        body_.removeChild(nums[mm]);
+        console.log(nums.length);
+        if (nums.length == 1) {
+            next();
+        }
+    }
+    var c = 10;
+    for (var i = 0; i < c; i++) {
+        var num = document.createElement('div');
+        num.className = 'num';
+        num.innerHTML = c - i;
+        body_.appendChild(num);
+    }
+    var niu = document.querySelector('.niu');
+    function next() {
+        clearInterval(timer);
+        niu.style.display = 'block';
+    }
+    made();
+    var over = document.querySelector('.over');
+    function gameover() {
+        over.style.display = 'block';
+    }
+</script>
+
+</html>

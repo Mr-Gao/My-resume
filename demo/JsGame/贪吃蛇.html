@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>贪吃蛇</title>
+    <style media="screen">
+        .wrap {
+            margin: auto;
+            font-size: 0;
+            font-family: 微软雅黑;
+            border: 1px solid #86c3cf;
+            color: #29488f;
+            position: relative;
+        }
+
+        .colDiv {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        .snake {
+            background: #86c3cf;
+        }
+
+        .egg {
+            background: #86c3cf;
+        }
+
+        .hhh {
+            width: 45%;
+            height: 31px;
+            font-size: 25px;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .head {
+            width: 100%;
+            height: 31px;
+            font-size: 25px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .score {
+            width: 45%;
+            height: 31px;
+            font-size: 25px;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .againgame {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top: 84px;
+            background: rgba(134, 195, 207, 0.6);
+            display: none;
+        }
+
+        .over {
+            width: 100%;
+            position: absolute;
+            top: 160px;
+            color: #ffa09c;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .again {
+            width: 100%;
+            position: absolute;
+            top: 230px;
+            color: #128f71;
+            font-size: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .line {
+            width: 100%;
+            border: 1px solid #86c3cf;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="head">贪吃蛇游戏</div>
+    <div class="hhh">
+        历史最高:0
+    </div>
+    <div class="score">得分:0</div>
+    <div class="line">
+
+    </div>
+    <div class="againgame">
+        <div class="over">Game Over</div>
+        <div class="again">再来一次</div>
+    </div>
+</div>
+<script type="text/javascript">
+    var wrap = document.querySelector('.wrap');
+    var againgame = document.querySelector('.againgame');
+    var again = document.querySelector('.again');
+    var score = document.querySelector('.score');
+    var hhh = document.querySelector('.hhh');
+    var scores = 0;
+    var rownum = 20;
+    var colnum = 20;
+    var allArr = [];
+    for (var i = 0; i < rownum; i++) {
+        var rowDiv = document.createElement('div');
+        var rowArr = [];
+        for (var j = 0; j < colnum; j++) {
+            var colDiv = document.createElement('div');
+            colDiv.className = 'colDiv';
+            rowArr.push(colDiv);
+            rowDiv.appendChild(colDiv);
+        }
+        allArr.push(rowArr);
+        wrap.appendChild(rowDiv);
+    }
+    wrap.style.width = colnum * colDiv.offsetWidth + 'px';
+    // 蛇身
+    var snakebody = [];
+    function snake() {
+        for (var i = 0; i < 3; i++) {
+            allArr[0][i].className = 'colDiv snake';
+            snakebody.push(allArr[0][i]);
+        }
+    }
+    snake();
+    // 蛇移动
+    var speedtime = 200;
+    var moveTimer = null;
+    var direction = 'right';
+    var x = 2;
+    var y = 0;
+
+    function snakemove() {
+        moveTimer = setInterval(function () {
+            switch (direction) {
+                case 'right':
+                    x++;
+                    break;
+                case 'left':
+                    x--;
+                    break;
+                case 'up':
+                    y--;
+                    break;
+                case 'down':
+                    y++;
+                    break;
+                default:
+            }
+            if (x < 0 || y < 0 || x >= colnum || y >= rownum) {
+                clearInterval(moveTimer);
+                againgame.style.display = 'block';
+                h();
+                return;
+            }
+            for (var i = 0; i < snakebody.length; i++) {
+                if (snakebody[i] == allArr[y][x]) {
+                    clearInterval(moveTimer);
+                    againgame.style.display = 'block';
+                    h();
+                    return;
+                }
+            }
+            if (x == eggx && y == eggy) {
+                snakebody.push(allArr[eggy][eggx]);
+                allArr[eggy][eggx].className = 'colDiv snake';
+                scores++;
+                score.innerHTML = '得分:' + scores;
+                createEgg();
+            } else {
+                snakebody[0].className = 'colDiv';
+                snakebody.shift();
+                allArr[y][x].className = 'colDiv snake';
+                snakebody.push(allArr[y][x]);
+            }
+        }, speedtime);
+    }
+    snakemove();
+    // 添加键盘事件
+    var kd = true;
+    document.onkeydown = function (event) {
+        if (!kd) {
+            return;
+        }
+        var event = event || window.event;
+        if (event.keyCode == 37 && direction == 'right') {
+            return;
+        }
+        if (event.keyCode == 39 && direction == 'left') {
+            return;
+        }
+        if (event.keyCode == 40 && direction == 'up') {
+            return;
+        }
+        if (event.keyCode == 38 && direction == 'down') {
+            return;
+        }
+        switch (event.keyCode) {
+            case 37:
+                direction = 'left';
+                break;
+            case 38:
+                direction = 'up';
+                break;
+            case 39:
+                direction = 'right';
+                break;
+            case 40:
+                direction = 'down';
+                break;
+            default:
+        }
+        kd = false;
+        var kdd = setTimeout(function () {
+            kd = true;
+        }, speedtime)
+    };
+    // 生成随机蛋
+    function rand(max) {
+        var ran = parseInt(Math.random() * max);
+        return ran;
+    }
+    function createEgg() {
+        eggx = rand(colnum);
+        eggy = rand(rownum);
+        if (allArr[eggy][eggx].className == 'colDiv snake') {
+            createEgg();
+        } else {
+            allArr[eggy][eggx].className = 'colDiv egg';
+        }
+    }
+    createEgg();
+    // 重新开始
+    again.onclick = function () {
+        for (var i = 0; i < snakebody.length; i++) {
+            snakebody[i].className = 'colDiv';
+        }
+        snakebody = [];
+        x = 2;
+        y = 0;
+        snake();
+        allArr[eggy][eggx].className = 'colDiv';
+        createEgg();
+        snakemove();
+        direction = 'right';
+        againgame.style.display = 'none';
+        scores = 0;
+        score.innerHTML = '得分:0';
+    };
+    function h() {
+        var his = localStorage.getItem('max');
+        if (his == null || his < scores) {
+            localStorage.setItem('max', scores);
+            his = scores;
+        }
+        hhh.innerHTML = '历史最高:' + his;
+    }
+</script>
+</body>
+</html>

@@ -29,8 +29,11 @@ $(function(){
 
             // 绑定button点击事件
             $('#btn-call').on('click', function () {
-                $(this).css('display', 'none');
-                $('.btn-p').css('display', 'block');
+                $(this).animate({width:0,height:0,opacity:0,fontSize:0},100);
+                setTimeout(function(){
+                    $('#btn-call').css('display', 'none');
+                    $('.btn-div').css('display','block').animate({opacity:1},300);
+                },400);
             });
 
             function change() {

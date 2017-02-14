@@ -120,6 +120,20 @@
                     url: 'demo/javascript/DynamicallyCreateForm.html'
                 }
             ]
+        }, {
+            title: 'JS小游戏',
+            con: [
+                {
+                    name: '看色点字',
+                    url: 'demo/JsGame/看色点字.html'
+                }, {
+                    name: '见缝插针',
+                    url: 'demo/JsGame/见缝插针.html'
+                }, {
+                    name: '贪吃蛇',
+                    url: 'demo/JsGame/贪吃蛇.html'
+                }
+            ]
         }
     ];
 
@@ -133,10 +147,10 @@
     var str = '';
     for (var i = 0; i < data.length; i++) {
         str += '<li class="title">';
-        str += '<h4>'+ data[i].title +'</h4>';
+        str += '<h4>' + data[i].title + '</h4>';
         str += '<ul data-url="1" class="ul-bindEvent">';
         for (var j = 0; j < data[i].con.length; j++) {
-            str += '<li data-url="'+ data[i].con[j].url +'">'+ data[i].con[j].name +'</li>';
+            str += '<li data-url="' + data[i].con[j].url + '">' + data[i].con[j].name + '</li>';
         }
         str += '</ul>';
         str += '</li>';
@@ -145,13 +159,12 @@
     ul.innerHTML = str;
 
 
-
     // 绑定li点击事件
     var bindEvent = document.querySelectorAll('.ul-bindEvent');
-    for(var i = 0; i < bindEvent.length; i++){
+    for (var i = 0; i < bindEvent.length; i++) {
         var bind = bindEvent[i].children;
-        for (var j = 0; j < bind.length; j++){
-            bind[j].addEventListener('click',function(){
+        for (var j = 0; j < bind.length; j++) {
+            bind[j].addEventListener('click', function () {
                 iframe.setAttribute('src', this.dataset.url);
             })
         }
