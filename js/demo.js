@@ -1,5 +1,6 @@
 // 数据绑定 初始化
 (function () {
+
     var data = [
         {
             title: '轮播图',

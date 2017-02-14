@@ -1,13 +1,13 @@
-/*公共样式*/
+﻿/*公共样式*/
 html {
     overflow: hidden;
     user-select: none;
 }
 
+
 body {
     font: 12px 'Helvetica Neue',sans-serif;
     color: #fff;
-    background-color: #272C34;
     height: 2000px;
     width: 100%;
 }
@@ -52,7 +52,7 @@ header {
     width: 100%;
     height: 80px;
     min-width: 1002px;
-    background-color: rgba(30, 40, 50, 0.9);
+    background-color: rgba(255, 255, 255, 0.08);
     position: absolute;
     z-index: 1000;
 }

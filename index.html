@@ -188,7 +188,6 @@
         <!--data-transition-duration="2000"`这样的属性来改变切换场景的速度，默认的话，是1000（也就是1秒）-->
         <!--data-perspective="500"`来改变透视的深度，默认是1000。如果设置为0的话，美丽的3D效果就离我们远去了。-->
 
-
     </section>
 </article>
 <!--主体结束-->
@@ -206,55 +205,11 @@
     </div>
     <div id="footer-div">请按 ← 或 → 浏览网页，也可以直接鼠标点击每个小页面来浏览</div>
 </footer>
+
 <!--脚部结束-->
 <script src="lib/jquery.js"></script>
 <script src="lib/impress.js"></script>
-<script type="text/javascript">
-    (function (window, document) {
-        impress().init();  // 初始化幻灯片的step
-
-        var $imgs = $('img');
-        var imgs = document.querySelectorAll('img');
-        var imgsIndex = $imgs.length;
-
-        function imgLoad(img, callback) {
-            var timer = setInterval(function () {
-                for (var i = 0; i < imgsIndex; i++) {
-                    if (img[i].complete) {
-                        imgsIndex--;
-                        if (!imgsIndex) {
-                            clearInterval(timer);
-                            callback(img);
-                            console.log('加载完成');
-                        }
-                    }
-                }
-            }, 100);
-        }
-
-        imgLoad(imgs, function () {
-            $('#zz').css('display','none').html('');
-
-            // 绑定button点击事件
-            $('#btn-call').on('click', function () {
-                $(this).css('display', 'none');
-                $('.btn-p').css('display', 'block');
-            });
-
-            function change() {
-                $('#footer-div').css('top', document.body.clientHeight - 70);
-            }
-
-            window.onresize = function () {
-                change();
-            };
-            change();
-
-        });
-
-
-    })(window, document);
-</script>
+<script src="js/index.js"></script>
 </body>
 </html>
 
