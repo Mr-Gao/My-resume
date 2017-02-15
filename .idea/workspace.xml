@@ -2,14 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0249b087-425b-4e91-894d-291d4e5b3f51" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/JsGame/看色点字.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/JsGame/见缝插针.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/JsGame/贪吃蛇.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/next_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/prev_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/next_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/prev_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/w7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/javascript/images/wicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/template.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/1.png" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/2.png" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/3.png" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/4.png" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/next.png" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/next.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/prev.png" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/prev.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic1.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic2.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic3.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic4.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic5.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/slidepic5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w1.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w2.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w3.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w4.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w5.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w6.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/images/w7.jpg" afterPath="$PROJECT_DIR$/demo/carouselFigure/images/w7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/1.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/2.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/3.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/4.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/5.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/bg.png" afterPath="$PROJECT_DIR$/demo/javascript/images/bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/bottom.png" afterPath="$PROJECT_DIR$/demo/javascript/images/bottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/clock.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/clock.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/dian.png" afterPath="$PROJECT_DIR$/demo/javascript/images/dian.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/fu.png" afterPath="$PROJECT_DIR$/demo/javascript/images/fu.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/hour.png" afterPath="$PROJECT_DIR$/demo/javascript/images/hour.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/jia.png" afterPath="$PROJECT_DIR$/demo/javascript/images/jia.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/mei.png" afterPath="$PROJECT_DIR$/demo/javascript/images/mei.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/minute.png" afterPath="$PROJECT_DIR$/demo/javascript/images/minute.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/mouse.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/mouse.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/mouse1.jpg" afterPath="$PROJECT_DIR$/demo/javascript/images/mouse1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/rss.png" afterPath="$PROJECT_DIR$/demo/javascript/images/rss.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/second.png" afterPath="$PROJECT_DIR$/demo/javascript/images/second.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/top.png" afterPath="$PROJECT_DIR$/demo/javascript/images/top.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/javascript/images/toy.png" afterPath="$PROJECT_DIR$/demo/javascript/images/toy.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/guide.png" afterPath="$PROJECT_DIR$/images/guide.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/ku.png" afterPath="$PROJECT_DIR$/images/ku.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/logo.jpg" afterPath="$PROJECT_DIR$/images/logo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/xiao.png" afterPath="$PROJECT_DIR$/images/xiao.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/demo.js" afterPath="$PROJECT_DIR$/js/demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/carouselFigure/js/animate.js" afterPath="$PROJECT_DIR$/demo/carouselFigure/js/animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/css3/翻转导航栏.html" afterPath="$PROJECT_DIR$/demo/css3/翻转导航栏.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery.js" afterPath="$PROJECT_DIR$/lib/jquery.js" />
     </list>
     <ignored path="MyShow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,71 +88,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.0625">
-              <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.1766513">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="贪吃蛇.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/JsGame/贪吃蛇.html">
+      <file leaf-file-name="翻转导航栏.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/css3/翻转导航栏.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-94.40625">
-              <caret line="227" column="6" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
+            <state vertical-scroll-proportion="-5.03125">
+              <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/demo.js">
+      <file leaf-file-name="旋转轮播图.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/carouselFigure/旋转轮播图.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0625">
+              <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="js.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/js.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.76666665">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wjs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/wjs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.233333">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/animate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="见缝插针.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/JsGame/见缝插针.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.75">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="看色点字.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/JsGame/看色点字.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31748468">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.90625">
-              <caret line="175" column="18" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
+              <caret line="69" column="26" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -163,6 +211,8 @@
         <option value="$PROJECT_DIR$/js/demo.js" />
         <option value="$PROJECT_DIR$/demo/JsGame/见缝插针.html" />
         <option value="$PROJECT_DIR$/demo/JsGame/看色点字.html" />
+        <option value="$PROJECT_DIR$/demo/carouselFigure/js/animate.js" />
+        <option value="$PROJECT_DIR$/demo/css3/翻转导航栏.html" />
       </list>
     </option>
   </component>
@@ -172,8 +222,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="291" />
-    <option name="y" value="164" />
+    <option name="x" value="389" />
+    <option name="y" value="329" />
     <option name="width" value="1344" />
     <option name="height" value="844" />
   </component>
@@ -208,8 +258,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,7 +286,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyShow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="My-resume" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyShow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="My-resume" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -266,12 +342,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyShow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="My-resume" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,28 +455,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="291" y="164" width="1344" height="844" extended-state="0" />
+    <frame x="389" y="329" width="1344" height="844" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -420,42 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/css/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.3125">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/javascript/五角星评分控件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.5">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/javascript/微博发布.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/javascript/惯性滑动.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.90625">
@@ -477,24 +537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/javascript/选择文件显示文件信息.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.9375">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/旋转轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0625">
-          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -579,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -629,13 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.24731183">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/css3/翻转导航栏.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8402457">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -695,27 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/css/wcss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6466974">
-          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/wjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03362573">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/定位轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18865031">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/css3-3d-cube-loading/js/prefixfree.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16428572">
@@ -727,30 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.034431137">
           <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/JsGame/贪吃蛇.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-94.40625">
-          <caret line="227" column="6" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.0625">
-          <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.90625">
-          <caret line="175" column="18" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,16 +765,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/JsGame/见缝插针.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.75">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/JsGame/贪吃蛇.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="227" column="6" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/JsGame/看色点字.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31748468">
+        <state vertical-scroll-proportion="-6.46875">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-125.78125">
+          <caret line="175" column="18" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/css/wcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.46875">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/定位轮播图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.84375">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/旋转轮播图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0625">
+          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/animate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.76666665">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/carouselFigure/js/wjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.233333">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/css3/翻转导航栏.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.03125">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/impress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.067349926">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1766513">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding />
         </state>
       </provider>

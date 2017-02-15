@@ -53,12 +53,9 @@
         }
         
     </style>
-    <script src="jquery.min.js"></script>
+    <script src="../../lib/jquery.js"></script>
     <script>
         $(function(){
-//            $('.nav-items').append('<ul class="son-ul"></ul>');
-//            $('.son-ul').append('<li></li><li></li><li></li><li></li><li></li>');
-//            $('.son-ul').children('li').text('子元素内容');
             $('.nav-items').on('mouseenter mouseleave',function(e){
                 if(e.type == 'mouseleave'){
                     $(this).children('.son-ul').children('li').each(function(index,ele){

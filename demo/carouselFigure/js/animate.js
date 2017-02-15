@@ -9,18 +9,15 @@ function animate(obj,json,fn) {  // 给谁    json
         for(var attr in json){   // attr  属性     json[attr]  值
             //开始遍历 json
             // 计算步长    用 target 位置 减去当前的位置  除以 10
-            // console.log(attr);
             var current = 0;
             if(attr == "opacity")
             {
                 current = Math.round(parseInt(getStyle(obj,attr)*100)) || 0;
-                console.log(current);
             }
             else
             {
                 current = parseInt(getStyle(obj,attr)); // 数值
             }
-            // console.log(current);
             // 目标位置就是  属性值
             var step = ( json[attr] - current) / 10;  // 步长  用目标位置 - 现在的位置 / 10
             step = step > 0 ? Math.ceil(step) : Math.floor(step);
