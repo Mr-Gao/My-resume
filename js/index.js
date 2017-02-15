@@ -17,7 +17,6 @@ $(function(){
                         if (!imgsIndex) {
                             clearInterval(timer);
                             callback(img);
-                            console.log('加载完成');
                         }
                     }
                 }
