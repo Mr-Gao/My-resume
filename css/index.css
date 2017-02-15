@@ -216,7 +216,8 @@ footer > div {
     font-size: 30px;
     text-align: center;
 }
-footer > #zz {
+footer > #zz ,
+.no-support-message {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -224,6 +225,15 @@ footer > #zz {
     left: 0;
     z-index: 1111;
     background-image: linear-gradient(120deg, #155799, #159957);
+}
+.no-support-message {
+    font-size: 50px;
+    text-align: center;
+
+}
+.no-support-message > p {
+    margin-top: 200px;
+    color: #2a3746;
 }
 
 .no-support-message { display:none; }

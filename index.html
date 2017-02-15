@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+<div class="no-support-message">
+    <p>你的浏览器不是最新版本，不支持此页面特效！</p>
+    <p>请升级至最新版本浏览器！</p>
+</div>
+
+
+<!--[if gt IE 10]>
+
 <!--头部开始-->
 <header>
     <ul>
@@ -30,13 +39,7 @@
 <!--主体开始-->
 <article>
     <section>
-        <div class="no-support-message">
-            <p>你的浏览器不是最新版本，不支持此页面特效！</p>
-            <p>请升级至最新版本浏览器！</p>
-        </div>
         <div id="impress">
-
-
             <div class="step" data-x="0" data-y="0">
                 <div class="header-img">
                     <img src="images/logo.jpg" alt="">
@@ -44,7 +47,6 @@
                 <div class="step1-text text">
                     <p>高亿尧</p>
                     <p>一个立志成为高级架构师的男人</p>
-                    <!--<p>Aspires to be a senior architects</p>-->
                 </div>
             </div>
             <div class="step" data-x="1000" data-y="">
@@ -206,6 +208,9 @@
 </footer>
 
 <!--脚部结束-->
+
+<![endif]-->
+
 <script src="lib/jquery.js"></script>
 <script src="lib/impress.js"></script>
 <script src="js/index.js"></script>
