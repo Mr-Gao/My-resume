@@ -74,6 +74,10 @@ header > nav > ul > li > a:hover::after {
     margin: 40px 0;
     font-weight: bold;
 }
+.step1-text a {
+    font-size: 25px;
+    color: #ffa09c;
+}
 .step2-text > p{
     height: 40px;
     font-size: 30px;
