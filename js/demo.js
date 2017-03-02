@@ -139,10 +139,10 @@
             con: [
                 {
                     name: '电影搜索',
-                    url: 'demo/angular/moviecat/index.html'
+                    url: '//mr-gao.github.io/moviecat/#/in_theaters/p1'
                 }, {
                     name: '任务管理',
-                    url: 'demo/angular/todomvc/index.html'
+                    url: '//mr-gao.github.io/todomvc/'
                 }
             ]
         }
