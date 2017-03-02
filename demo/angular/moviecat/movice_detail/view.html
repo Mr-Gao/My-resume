@@ -1,0 +1,23 @@
+<h1 class="page-header">影片详细信息</h1>
+
+<div class="jumbotron">
+    <h2 class="title-size">{{details.title}}</h2>
+    <span class="rating">{{details.rating.average}}</span>
+    <div class="poster">
+        <img ng-src="{{details.images.large}}" alt="">
+    </div>
+    <p>导演：<span ng-repeat="director in details.directors">{{director.name + ($last ? '' : '/')}}</span></p>
+    <p>主演：<span ng-repeat="cast in details.casts">{{cast.name + ($last ? '' : '/')}}</span></p>
+    <p>类型：<span ng-repeat="genre in details.genres">{{genre + ($last ? '' : '/')}}</span></p>
+    <p>地区:<span ng-repeat="countrie in details.countries">{{countrie + ($last ? '' : '/')}}</span></p>
+    <p>上映年份：{{details.year}}</p>
+    <p class="douban-a"><a href="https://movie.douban.com/subject/{{details.id}}" target="_blank"
+                           class="btn btn-info">豆瓣详细信息</a></p>
+</div>
+
+<div class="row marketing">
+    <div class="col-lg-6">
+        <h4>详细信息</h4>
+        <p>{{details.summary}}</p>
+    </div>
+</div>

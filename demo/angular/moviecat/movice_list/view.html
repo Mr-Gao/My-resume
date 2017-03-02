@@ -1,0 +1,37 @@
+<h1 class="page-header">{{title}}</h1>
+<!--主体-->
+<div class="row">
+    <!--ng-click="toDetail(subject.id)"-->
+    <div class="col-md-4 select" ng-repeat="subject in subjects">
+        <h2 class="title-size">{{subject.title.length > 12 ? subject.title.slice(0,12) + '...' : subject.title}}</h2>
+        <span class="rating">{{subject.rating.average}}</span>
+        <div class="poster">
+            <img ng-src="{{subject.images.large}}" alt="">
+        </div>
+        <p>导演：<span ng-repeat="director in subject.directors">{{director.name + ($last ? '' : '/')}}</span></p>
+        <p>主演：<span ng-repeat="cast in subject.casts">{{cast.name + ($last ? '' : ' / ')}}</span></p>
+        <p>类型：{{subject.genres.join('/')}}</p>
+        <p>上映年份：{{subject.year}}</p>
+        <p class="douban-a"><a href="https://movie.douban.com/subject/{{subject.id}}" target="_blank" class="btn btn-info">豆瓣详细信息</a></p>
+    </div>
+</div>
+
+<!--加载动画-->
+<div class="spinner" ng-show="loading">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+</div>
+
+<!--分页部分-->
+<div ng-show="!loading" aria-label="Page navigation">
+    <ul class="pager">
+        <li ng-class="{disabled:(page-1) < 1}"><a ng-click="toPage(page-1)">上一页</a></li>
+        <li ng-class="{disabled:(page+1) > totalPage}"><a ng-click="toPage(page+1)">下一页</a></li>
+    </ul>
+</div>
+
+<!--脚部-->
+<p ng-show="!loading">总共{{totalCount}}条记录，第{{page}}/{{totalPage}}页。</p>

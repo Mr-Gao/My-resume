@@ -134,6 +134,17 @@
                     url: 'demo/JsGame/贪吃蛇.html'
                 }
             ]
+        }, {
+            title: 'angular',
+            con: [
+                {
+                    name: '电影搜索',
+                    url: 'demo/angular/moviecat/index.html'
+                }, {
+                    name: '任务管理',
+                    url: 'demo/angular/todomvc/index.html'
+                }
+            ]
         }
     ];
 
