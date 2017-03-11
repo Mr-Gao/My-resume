@@ -71,7 +71,7 @@ header > nav > ul > li > a:hover::after {
     height: 40px;
     font-size: 30px;
     line-height: 40px;
-    margin: 40px 0;
+    margin: 60px 0;
     font-weight: bold;
 }
 .step1-text a {
