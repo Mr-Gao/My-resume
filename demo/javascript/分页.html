@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页</title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .pagination,
+        .input-group {
+            margin: 20px;
+        }
+        .con {
+            width: 500px;
+            margin: 100px auto;
+        }
+        .btn {
+            margin: 20px 0 20px 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <p>调用时使用init方法()</p>
+    <p>参数可以为字符串 ( .className  #id  标签名) 选择器</p>
+    <p>参数可以为对象 { id : '选择器' , url : '跳转链接' , active : '选中样式类名'}</p>
+    <p style="color: red">url地址中跳转页码数请用@替换</p>
+    <p>跳转链接样板：http://www.baidu.com/fase/?page=<span style="color: red">@</span>&username=123&fssdd/</p>
+    <div class="input-group">
+        <span class="input-group-addon" id="startPage">当前页:</span>
+        <input type="text" class="form-control" placeholder="请输入当前页码">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="totalPage">总页数:</span>
+        <input type="text" class="form-control" placeholder="请输入总页码">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="showPage">展示页码数量:</span>
+        <input type="text" class="form-control" placeholder="请输入展示页码数量">
+    </div>
+    <div class="btn btn-info">生成分页</div>
+</div>
+<div class="con">
+    <ul class="pagination"></ul>
+</div>
+
+
+</body>
+<script>
+    (function (Page) {
+        // 参数：当前页，总页数，展示页数
+        Page = function (current, total, show) {
+            this.current = current;
+            this.total = total;
+            this.show = show;
+            // 左右区间
+            var region = Math.floor(this.show / 2);
+            // 开始页的计算
+            this.begin = (this.current - region) < 1 ? 1 : (this.current - region);
+            // 结束页的计算
+            this.end = this.begin + this.show;
+            if (this.end > this.total) {
+                this.end = this.total + 1;
+                this.begin = (this.end - this.show) < 1 ? 1 : (this.end - this.show);
+            }
+        };
+
+        Page.prototype.init = function (option) {
+            // url地址@前半部分
+            var urlBefore = '';
+            // url地址@后半部分
+            var urlAfter = '';
+            // 被选中的样式类名
+            var activeName = '';
+            // 判断传入参数是字符串还是对象
+            if (typeof option === 'string') {
+                var container = document.querySelector(option);
+            } else {
+                // 判断optionId是否为字符串
+                if (typeof option.id === 'string') {
+                    var container = document.querySelector(option.id);
+                }
+                // 判断是否传入url参数
+                if (option.url) {
+                    // url地址解析
+                    urlBefore = option.url.split('@')[0];
+                    urlAfter = option.url.split('@')[1];
+                }
+                // 判断是否传入active参数
+                if (option.active) {
+                    activeName = option.active;
+                }
+            }
+
+            // 字符串方式
+            var str = '';
+            if (this.current > 1) {
+                str += '<li><a href="' + urlBefore + (this.current - 1) + urlAfter + '">上一页</a></li>';
+            } else {
+                str += '<li><a href="javascript:void(0);">上一页</a></li>';
+            }
+
+            for (var i = this.begin; i < this.end; i++) {
+                if (i == this.current) {
+                    str += '<li class="' + activeName + '">';
+                } else {
+                    str += '<li>';
+                }
+                str += '<a href="' + urlBefore + i + urlAfter + '">' + i + '</a>';
+                str += '</li>';
+            }
+            if (this.current < this.total) {
+                str += '<li><a href="' + urlBefore + (this.current + 1) + urlAfter + '">下一页</a></li>';
+            } else {
+                str += '<li><a href="javascript:void(0);">下一页</a></li>';
+            }
+            container.innerHTML = str;
+
+//  append方式
+//            var prevElement = document.createElement('li');
+//            prevElement.innerHTML = '<a href="' + urlBefore + (this.current - 1) + urlAfter + '">上一页</a>';
+//            if (this.current == 1) {
+//                prevElement.classList.add('disabled')
+//            }
+//            container.appendChild(prevElement);
+//
+//            for (var i = this.begin; i < this.end; i++) {
+//                var lisElement = document.createElement('li');
+//                lisElement.innerHTML = '<a href="' + urlBefore + i + urlAfter + '">' + i + '</a>';
+//                if (i == this.current) {
+//                    lisElement.classList.add(activeName);
+//                }
+//                container.appendChild(lisElement);
+//            }
+//
+//            var nextElement = document.createElement('li');
+//            nextElement.innerHTML = '<a href="' + urlBefore + (this.current + 1) + urlAfter + '">下一页</a>';
+//            if (this.current == this.total) {
+//                nextElement.classList.add('disabled')
+//            }
+//            container.appendChild(nextElement);
+        };
+        window.Page = Page;
+    })(window.Page || {});
+
+    var btn = document.querySelector('.btn');
+    var inputs = document.querySelectorAll('input');
+    btn.addEventListener('click',function(){
+        var page = new Page(parseInt(inputs[0].value), parseInt(inputs[1].value), parseInt(inputs[2].value));
+        page.init({
+            id: '.pagination',
+            url: '',
+            active: 'active'
+        });
+    });
+
+</script>
+</html>

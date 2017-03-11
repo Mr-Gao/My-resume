@@ -118,6 +118,9 @@
                 }, {
                     name: '动态创建表格',
                     url: 'demo/javascript/DynamicallyCreateForm.html'
+                }, {
+                    name: '分页模块',
+                    url: 'demo/javascript/分页.html'
                 }
             ]
         }, {

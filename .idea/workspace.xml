@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0249b087-425b-4e91-894d-291d4e5b3f51" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/components/http.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/movice_detail/controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/movice_detail/view.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/movice_list/controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/movice_list/view.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/moviecat/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/app-readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/js/controllers/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/js/services/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular/todomvc/readme.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/demo.js" afterPath="$PROJECT_DIR$/js/demo.js" />
-    </list>
+    <list default="true" id="0249b087-425b-4e91-894d-291d4e5b3f51" name="默认的" comment="" />
     <ignored path="MyShow.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -325,9 +303,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="265" y="155" width="1344" height="811" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
